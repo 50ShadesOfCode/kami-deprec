@@ -16,6 +16,11 @@ jobs:
     - rust: nightly
   fast_finish: true
 
+script:
+  - bash ci/script.sh
+
+after_script: set +e
+
 before_deploy:
   - sh ci/before_deploy.sh
   - git config --local user.name "50ShadesOfCode"
