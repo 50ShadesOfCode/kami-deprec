@@ -10,4 +10,10 @@ jobs:
     - rust: nightly
     fast_finish: true
 
+branches:
+  only:
+    # release tags
+    - /^v\d+\.\d+\.\d+.*$/
+    - master
+
 cache: cargo
