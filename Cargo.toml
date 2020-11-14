@@ -1,0 +1,13 @@
+[package]
+name = "tp"
+version = "0.0.1"
+authors = ["50ShadesOfCode <kaktysh20040130@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap="2.33.3"
+textwrap="0.12"
+term="*"
+run_script="0.6.3"
