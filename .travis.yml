@@ -97,6 +97,7 @@ deploy:
   file_glob: true
   file: $CRATE_NAME-$TRAVIS_TAG-$TARGET.*
   on:
+    branches: main
     condition: $TRAVIS_RUST_VERSION = stable
     tags: true
   provider: releases
