@@ -7,5 +7,5 @@ fn main() {
         .about("This is about living")
         .author("50ShadesOfCode <kaktysh20040130@gmail.com>")
         .get_matches();
-    println!("Okk")
+    println!("Okkk")
 }
