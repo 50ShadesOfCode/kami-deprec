@@ -98,10 +98,11 @@ deploy:
   file: $CRATE_NAME-$TRAVIS_TAG-$TARGET.*
   provider: releases
   cleanup: true
-on:
-  all_branches: true
-  condition: $TRAVIS_RUST_VERSION = stable
-  tags: true
+  on:
+    branches:
+      all_branches: true
+    condition: $TRAVIS_RUST_VERSION = stable
+    tags: true
 
 branches:
   only:
