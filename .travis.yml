@@ -75,6 +75,10 @@ matrix:
     #  os: osx
     #  rust: nightly
 
+before_install:
+  - set -e
+  - rustup self update
+
 script:
   - bash ci/script.sh
 
@@ -94,7 +98,7 @@ deploy:
   file: $CRATE_NAME-$TRAVIS_TAG-$TARGET.*
   on:
     condition: $TRAVIS_RUST_VERSION = stable
-    tags: false
+    tags: true
   provider: releases
   skip_cleanup: true
 
@@ -102,6 +106,6 @@ branches:
   only:
     # release tags
     - /^v\d+\.\d+\.\d+.*$/
-    - master
+    - main
 
 cache: cargo
