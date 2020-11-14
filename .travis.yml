@@ -99,8 +99,7 @@ deploy:
   provider: releases
   cleanup: true
   on:
-    branches:
-      all_branches: true
+    branch: main
     condition: $TRAVIS_RUST_VERSION = stable
     tags: true
 
