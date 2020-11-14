@@ -1,4 +1,10 @@
+dist: trusty
 language: rust
+sudo: required
+
+env:
+  global:
+    - CRATE_NAME=kami
 
 rust:
   - stable
@@ -32,6 +38,6 @@ branches:
   only:
     # release tags
     - /^v\d+\.\d+\.\d+.*$/
-    - main
+    - master
 
 cache: cargo
