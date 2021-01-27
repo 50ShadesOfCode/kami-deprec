@@ -103,10 +103,10 @@ deploy:
     condition: $TRAVIS_RUST_VERSION = stable
     tags: true
 
-#branches:
-#  only:
-#    # release tags
-#    - /^v\d+\.\d+\.\d+.*$/
-#    - main
+branches:
+  only:
+    # release tags
+    - /^v\d+\.\d+\.\d+.*$/
+    - main
 
 cache: cargo
