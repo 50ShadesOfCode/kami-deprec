@@ -84,12 +84,12 @@ before_install:
 
 #after_script: set +e
 
-#before_deploy:
-  #- git config --local user.name "50ShadesOfCode"
-  #- git config --local user.email "killershadow425@gmail.com"
-  #- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  #- git tag $TRAVIS_TAG
-  #- sh ci/before_deploy.sh
+before_deploy:
+  - git config --local user.name "50ShadesOfCode"
+  - git config --local user.email "killershadow425@gmail.com"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
+  - sh ci/before_deploy.sh
 
 deploy:
   token:
